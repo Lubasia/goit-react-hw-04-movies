@@ -1,0 +1,7 @@
+@base_url=https://api.themoviedb.org
+@key=c2812ce3e38d3f99bfe989a5dd3cda88
+
+GET {{base_url}}/3/movie/550?api_key={{key}}
+Content-Type: application/json
+
+###

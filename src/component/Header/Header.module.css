@@ -1,0 +1,23 @@
+.Header {
+  padding: 20px;
+  background-color: azure;
+  box-shadow: 0px 2px 8px 0px rgba(227, 102, 212, 0.2);
+}
+.HeaderList {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  list-style: none;
+}
+.HeaderListItem {
+  font-size: 25px;
+}
+.HeaderListItem:not(:last-child) {
+  margin-right: 30px;
+}
+.HeaderLink {
+  text-decoration: none;
+}
+.activeLink {
+  color: red;
+}
