@@ -1,6 +1,6 @@
 import { Component } from 'react';
-import MoviesList from '../../MoviesList';
-import dotaApi from '../../../api/dota.api';
+import MoviesList from '../../component/MoviesList';
+import dotaApi from '../../api/dota.api';
 
 export class HomePage extends Component {
   state = {

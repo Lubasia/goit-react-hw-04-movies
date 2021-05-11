@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import style from './ReviewsList.module.css';
+import style from '../Header/Header.module.css';
 import dotaApi from '../../api/dota.api';
 
 export default class Cast extends Component {
@@ -21,9 +21,9 @@ export default class Cast extends Component {
     return (
       <>
         {isShowReviews ? (
-          <ul className={style.list}>
+          <ul className={style.HeaderList}>
             {reviews.map(review => (
-              <li className={style.listItem} key={review.id}>
+              <li className={style.HeaderListItem} key={review.id}>
                 <h3>Author: {review.author}</h3>
                 <p>{review.content}</p>
               </li>

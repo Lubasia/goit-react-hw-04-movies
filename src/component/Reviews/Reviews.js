@@ -1,29 +1,29 @@
 import { NavLink } from 'react-router-dom';
-import style from './Reviews.module.css';
+import style from '../Header/Header.module.css';
 
 const Reviews = ({ url, location }) => {
   return (
     <nav>
-      <ul className={style.list}>
-        <li className={style.listItem}>
+      <ul className={style.HeaderList}>
+        <li className={style.HeaderListItem}>
           <NavLink
             to={{
               pathname: `${url}/cast`,
               state: location,
             }}
-            className={style.link}
+            className={style.HeaderLink}
             activeClassName={style.activeLink}
           >
             Cast
           </NavLink>
         </li>
-        <li className={style.listItem}>
+        <li className={style.HeaderListItem}>
           <NavLink
             to={{
               pathname: `${url}/reviews`,
               state: location,
             }}
-            className={style.link}
+            className={style.HeaderLink}
             activeClassName={style.activeLink}
           >
             Reviews

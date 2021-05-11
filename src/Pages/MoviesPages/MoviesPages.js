@@ -1,9 +1,9 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
-import dotaApi from '../../../api/dota.api';
 import queryString from 'query-string';
-import MoviesList from '../../MoviesList';
-import Searchbar from '../../Searchbar';
+import dotaApi from '../../api/dota.api';
+import MoviesList from '../../component/MoviesList';
+import Searchbar from '../../component/Searchbar';
 
 export class MoviesPages extends Component {
   state = {

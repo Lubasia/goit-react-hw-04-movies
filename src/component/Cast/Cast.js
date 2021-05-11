@@ -1,7 +1,7 @@
 import { Component } from 'react';
 
 import dotaApi from '../../api/dota.api';
-import style from './Cast.module.css';
+import style from '../MoviesList/MoviesList.module.css';
 
 export default class Cast extends Component {
   state = {
@@ -18,9 +18,9 @@ export default class Cast extends Component {
   render() {
     const { moviesList } = this.state;
     return (
-      <ul className={style.list}>
+      <ul className={style.MoviesList}>
         {moviesList.map(actor => (
-          <li className={style.listItem} key={actor.id}>
+          <li className={style.MoviesListItem} key={actor.id}>
             <div>
               <img
                 src={
@@ -30,6 +30,7 @@ export default class Cast extends Component {
                 }
                 alt={`Actor: ${actor.name}`}
                 width={200}
+                className={style.MoviesCard}
               />
             </div>
             <h3 className={style.actorTitle}>{actor.name}</h3>

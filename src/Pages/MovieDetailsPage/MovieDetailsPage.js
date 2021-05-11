@@ -1,13 +1,12 @@
-import { Component, Suspense } from 'react';
+import { Component, Suspense, lazy } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import dotaApi from '../../../api/dota.api';
-import routes from '../../../routes';
-import MovieDetails from '../../MovieDetails';
-import Loader from '../../Loader';
-import Cast from '../../Cast';
-import Reviews from '../../Reviews';
-// const Cast = lazy(() => import('../../Cast'));
-// const Reviews = lazy(() => import('../../Reviews'));
+import dotaApi from '../../api/dota.api';
+import routes from '../../routes';
+import MovieDetails from '../../component/MovieDetails';
+import Loader from '../../component/Loader';
+import ReviewsList from '../../component/ReviewsList';
+const Cast = lazy(() => import('../../component/Cast'));
+const Reviews = lazy(() => import('../../component/Reviews'));
 
 class MovieDetailsPage extends Component {
   state = {
@@ -29,7 +28,7 @@ class MovieDetailsPage extends Component {
   handleGoBack = () => {
     const { location, history } = this.props;
 
-    history.push(location?.state?.from || routes.movies);
+    history.push(location?.state?.from || routes.home);
   };
   render() {
     return (
@@ -59,7 +58,7 @@ class MovieDetailsPage extends Component {
               exact
               path={`${this.props.match.url}/reviews`}
               render={props => (
-                <Reviews {...props} id={this.props.match.params.movieId} />
+                <ReviewsList {...props} id={this.props.match.params.movieId} />
               )}
             />
           </Switch>
